@@ -1,0 +1,95 @@
+
+~ 1. Data Extraction :
+
+Load an HTML table from a website.
+
+Load 3 Excel files : Sales_Jan.xlsx , Sales_Feb.xlsx , Sales_Mar.xlsx.
+
+Use Append Queries from Folder to combine the sales files.
+
+Load an Employee dataset from another Excel file : employee_dataset_200_rows.xlsx.
+
+
+~ 2. Basic Transformations :
+
+Promote the first row to headers.
+
+Rename columns to clear and meaningful names.
+
+
+~ 3. Text Tools :
+
+UPPER() - converts text to uppercase in Payment_Method column - Table : Append_Three_month_data.
+
+LOWER() - converts text to lowercase in Category column - Table : Sales_data.
+
+TRIM() - removes extra spaces in Customer_ID column - Table : Sales_data.
+
+CLEAN() - clean text in Total_Amount column - Table : Append_Three_month_data.
+
+Split Column by Delimiter - extract text from website column - Table : Product_from_web.
+
+
+~ 4. Numeric Tools :
+
+Round off values to two decimal places in Unit_Price / Price columns - Table : Product_from_web.
+
+Create Profit column using formula :
+Profit = Revenue - Cost.
+
+
+~ 5. Date & Time Tools :
+
+Work with Date column and extract :
+Day , Month , Year , Quarter - Table : Append_Three_month_data.
+
+Create Fiscal Month column using :
+Add Column → Date → Month - Table : Append_Three_month_data.
+
+
+~ 6. Conditional Columns & Indexing :
+
+Conditional Column → Create Sales_Category column using rules :
+
+High  (>10000)
+Medium (5000 - 9999)
+Low (<5000)
+
+Add 0 based index column - Table : Append_Three_month_data.
+
+
+~ 7. Pivoting & Unpivoting :
+
+This step was not applied because the dataset structure did not require pivot or unpivot operations.
+
+
+~ 8. Merging & Appending :
+
+Use Append Queries from Folder to combine the sales files.
+
+Merge Sales data with Employee data using Region column.
+
+
+~ 9. Grouping & Aggregation :
+
+Use Group By with Advanced option :
+
+Sum of Total_Amount → Column Name : Total_Sales
+Average of Total_Amount → Column Name : Average_Order_Value
+Count Rows → Column Name : Transaction_Count
+
+Table : Apr_Sales_data.
+
+
+~ 10. Data Profiling & Quality :
+
+Use Column Profile , Column Distribution , Column Quality tools to :
+
+Identify missing values
+Detect column level errors
+Understand distinct and unique values
+
+
+~ 12. Refresh Simulation :
+
+Add new file : Sales_Apr.xlsx and refresh the Power Query to automatically include the new data.

@@ -1,0 +1,110 @@
+Power BI Project 2 – Work Summary
+
+1. Importing Data
+
+First, I imported all the Excel files into Power BI by using **Get Data → Excel**.
+
+The files that were imported are : Sales_Fact , Customer_Dim , Product_Dim , Region_Dim , Date_Dim , and Returns_Fact .
+
+
+---
+
+
+2. Data Preparation
+
+After importing the files, I opened "Power Query Editor" to prepare and clean the data.
+
+During this step, I:
+
+- Removed blank rows
+- Verified the column names
+- Assigned correct data types such as Number, Date, Text, and Currency.
+
+
+---
+
+
+3. Loading the Data
+
+Once the data cleaning process was completed, I selected "Close & Apply" to load all the tables into the Power BI data model.
+
+
+---
+
+
+4. Building Relationships
+
+Next, I moved to "Model View" and created relationships between the tables.
+
+The relationships created were:
+
+Sales_Fact - Customer_Dim , 
+
+Sales_Fact - Product_Dim ,
+
+Sales_Fact - Region_Dim ,
+
+Sales_Fact - Date_Dim ,
+
+Returns_Fact - Sales_Fact
+
+These relationships help connect the "fact table" with the "dimension tables".
+
+
+---
+
+
+5. Setting Relationship Properties
+
+For each relationship, I configured the following settings:
+
+->Cardinality: Many to One (*:1)
+->Cross Filter Direction: Single
+
+This setup follows the structure of a "Star Schema" model.
+
+
+---
+
+
+6. Formatting the Data
+
+I also formatted important columns to improve readability:
+
+- Revenue → Currency
+- Quantity → Whole Number
+- Discount → Percentage
+- Date → Date format
+
+
+---
+
+
+7. Creating Hierarchies
+
+Hierarchies were created to make data analysis easier.
+
+"Date Hierarchy" : Year → Quarter → Month → Date
+
+"Region Hierarchy" : Country → State → City
+
+"Product Hierarchy" : Category → Subcategory → Product Name
+
+
+---
+
+
+8. Model Validation
+
+Finally, I checked the model to ensure everything was working correctly.
+
+-> All relationships were verified
+-> The tables followed the "Star Schema model"
+
+
+---
+
+
+~ Conclusion
+
+The Power BI data model was successfully developed by organizing the tables, defining relationships, and applying hierarchies and formatting. This model helps in analyzing and visualizing the data efficiently.
